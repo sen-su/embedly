@@ -11,7 +11,7 @@ var method = require('path').basename(process.argv[1]).match(/^embedly_([^.]+)(\
     }
   , usage =
     [ 'Fetch JSON from the embedly oembed service.'
-    , 'Usage embedly_oembed.js [OPTIONS] <url> [url]..'
+    , 'Usage embedly_' + method + '.js [OPTIONS] <url> [url]..'
     , ''
     , 'Options:'
     , ' -h, --host HOST          Embedly service host.  If key is present'

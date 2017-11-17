@@ -46,17 +46,17 @@ function embedly(opts) {
   this.config = _.merge({
     key: process.env['EMBEDLY_KEY'],
     host: 'api.embed.ly',
-    userAgent: 'Mozilla/5.0 (compatible; embedly-node/' + pkg.version + ')',
+    userAgent: 'Mozilla/5.0 (compatible; @sensu/embedly/' + pkg.version + ')',
     apiVersion: {
       objectify: 2,
       oembed: 1,
       preview: 1,
       extract: 1
     },
-    timeout: 200000,
-    protocol: false,
     logger: null,
-    servicesRegExp: null
+    secure: true,
+    servicesRegExp: null,
+    timeout: 200000
   }, opts);
 
   if (!this.config.logger) {

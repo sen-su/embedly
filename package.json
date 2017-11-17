@@ -1,38 +1,40 @@
 {
-  "name": "embedly",
-  "version": "2.1.0",
+  "name": "@sensu/embedly",
+  "version": "3.0.0",
   "description": "Embedly client library for node",
-  "homepage": "https://github.com/embedly/embedly-node",
-  "keywords": [],
+  "homepage": "https://github.com/sen-su/embedly",
+  "keywords": [
+    "embedly"
+  ],
   "author": "Bob Corsaro <bob@embed.ly> (http://www.google.com/profiles/rcorsaro)",
+  "contributors": [
+    {
+      "name": "Bjorn Stromberg",
+      "email": "bjorn@bjornstar.com",
+      "url": "http://bjornstar.com/about"
+    }
+  ],
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/embedly/embedly-node.git"
+    "url": "git://github.com/sen-su/embedly.git"
   },
   "bugs": {
-    "url": "http://github.com/embedly/embedly-node/issues/"
-  },
-  "directories": {
-    "doc": "./docs",
-    "lib": "./lib",
-    "test": "./test"
+    "url": "http://github.com/sen-su/embedly/issues"
   },
   "dependencies": {
-    "lodash": "4.13.1",
-    "superagent": "1.8.3",
-    "sprintf": "0.1.1",
-    "hashish": "0.0.4"
+    "hashish": "0.0.4",
+    "lodash": "^4.17.4",
+    "querystring": "^0.2.0",
+    "sprintf": "^0.1.5",
+    "superagent": "^3.8.1"
   },
   "devDependencies": {
-    "mocha": "1.8.2",
-    "should": "1.2.2",
-    "winston": "0.8.2"
+    "mocha": "^4.0.1",
+    "winston": "^2.4.0"
   },
   "scripts": {
     "test": "mocha"
-  },
-  "engines": {
-    "node": "*"
   },
   "bin": {
     "embedly_extract": "./bin/embedly_generic.js",

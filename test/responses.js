@@ -1,10 +1,13 @@
-var embedly = require('../index.js'),
-    winston = require('winston'),
-    logger = new (winston.Logger)({
-      transports: [new (winston.transports.Console)({ level: 'info' })]
-    });
+var embedly = require('../index.js');
+var winston = require('winston');
+
+var logger = new (winston.Logger)({
+  transports: [new (winston.transports.Console)({ level: 'info' })]
+});
 
 describe('embedly', function() {
+  this.timeout(30000);
+
   describe('oembed', function() {
     it('should call the oembed endpoint', function(done) {
       var api = new embedly({key: process.env.EMBEDLY_KEY, logger: logger}),
@@ -16,10 +19,12 @@ describe('embedly', function() {
             ]
           };
       api.oembed(params, function(err, res) {
-        if (!!err) {
-          console.error("Make sure you set environmental variable EMBEDLY_KEY to a valid api key");
+        if (err) {
+          if (err.message === 'Forbidden') {
+            console.error("Make sure you set environmental variable EMBEDLY_KEY to a valid api key");
+          }
           console.error(err.stack);
-          console.error(res && res.text);
+          res && console.error(res.text);
         } else {
           console.log(res);
         }
