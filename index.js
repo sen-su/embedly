@@ -1,7 +1,7 @@
 var _ = require('lodash'),
     pkg = require('./package.json'),
     request = require('superagent'),
-    sprintf = require('sprintf').sprintf,
+    sprintf = require('sprintf-js').sprintf,
     hashish = require('hashish'),
     querystring = require('querystring');
 
