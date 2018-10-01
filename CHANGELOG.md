@@ -1,7 +1,10 @@
 # @sensu/embedly CHANGELOG
 
+## v3.0.2
+* Removed Winston (@polco)
+
 ## v3.0.1
-* Replaced depracated sprintf by sprintf-js (@polco)
+* Replaced deprecated sprintf by sprintf-js (@polco)
 
 ## v3.0.0
 * Updated README to match code (@bjornstar)
