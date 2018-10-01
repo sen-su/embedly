@@ -1,6 +1,6 @@
 {
   "name": "@sensu/embedly",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Embedly client library for node",
   "homepage": "https://github.com/sen-su/embedly",
   "keywords": [
