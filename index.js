@@ -6,25 +6,15 @@ var _ = require('lodash'),
     querystring = require('querystring');
 
 function defaultLogger() {
-  try {
-    var winston = require('winston')
-    var logger = new (winston.Logger)({
-      transports: [new (winston.transports.Console)({ level: 'error' })]
-    });
-
-  } catch(e) {
     function log() {
       console.warn('`npm install winston` or set logger in embedly for logging');
     }
-    var logger = {
+    return logger = {
       debug: _.noop,
       error: _.noop,
       warn: _.noop
-    }
-  }
-  return logger;
+    };
 }
-
 
 // ## embedly ##
 //
